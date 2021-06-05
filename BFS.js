@@ -1,13 +1,4 @@
-class TreeNode {
-  /**
-   * @param {any} value
-   */
-  constructor(value) {
-    this.value = value;
-    this.left = null;
-    this.right = null;
-  }
-}
+const TreeNode = require('./TreeNode');
 
 /**
  * Breadth-First Search - find shortest path to searchValue in tree
@@ -16,6 +7,7 @@ class TreeNode {
  * @param {any} searchValue 
  */
 function bfs(tree, source, searchValue) {
+  console.log({ source: source.value, searchValue })
   // Start queue with source node.
   let queue = [];
   let path = [];
@@ -26,11 +18,11 @@ function bfs(tree, source, searchValue) {
     // Start with the first item in the queue.
     let current = queue[0];
     path.push(current.value);
-    console.log('Current node: ', current.value);
+    console.log('Current node:', current.value);
     
     // If the current value is what we are searching for, return.
     if (current.value === searchValue) {
-      console.log(searchValue, ' found!');
+      console.log(searchValue, 'found!');
       return path;
     }
 
@@ -92,4 +84,4 @@ let tree = {
 
 const source = tree[10];
 console.log(bfs(tree, source, '12'))
-console.log(bfs(tree, source, '18'))
+console.log(bfs(tree, source, '42'))

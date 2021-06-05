@@ -42,7 +42,7 @@ class Stack {
 
   /**
    * 
-   * @param {string} node
+   * @param {any} node
    */
   push(value) {
     if (value === undefined) {
@@ -81,3 +81,5 @@ class Stack {
     length--;
   }
 }
+
+module.exports = Stack;
