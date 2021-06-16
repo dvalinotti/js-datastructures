@@ -12,7 +12,7 @@ A Graph is a data structure that consists of nodes (values) and edges (connectio
   <summary>Example Code</summary>
   <p>
 
-  ```js{}[Graph.js]
+  ```js
   class Graph {
     constructor() {
       this.nodes = {};

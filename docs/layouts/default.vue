@@ -1,8 +1,19 @@
 <template>
   <div>
+    <nav class="bg-white w-full p-8 shadow-lg">
+      <h1 class="text-xl font-bold">Data Structures</h1>
+    </nav>
     <Nuxt />
   </div>
 </template>
+
+<script>
+export default {
+  mounted() {
+    // document.body.style.overflow = 'hidden'
+  },
+}
+</script>
 
 <style>
 html {
