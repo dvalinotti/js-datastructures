@@ -49,4 +49,16 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+.prose .nuxt-content-container {
+  padding-bottom: 5rem;
+  margin-bottom: 2rem;
+  margin-right: 4rem;
+  border-bottom: 2px solid #d0d0d0;
+}
+.prose h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  margin-top: 5rem;
+}
+</style>
