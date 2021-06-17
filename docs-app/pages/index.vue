@@ -61,4 +61,7 @@ export default {
   margin-bottom: 1rem;
   margin-top: 5rem;
 }
+.prose pre code {
+  font-size: 1rem;
+}
 </style>
