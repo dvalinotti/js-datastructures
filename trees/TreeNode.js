@@ -9,4 +9,13 @@ class TreeNode {
   }
 }
 
-module.exports = TreeNode
+class AVLTreeNode extends TreeNode {
+  constructor(value) {
+    super(value);
+    this.height = 1;
+  }
+}
+
+module.exports = {
+  TreeNode, AVLTreeNode
+}
