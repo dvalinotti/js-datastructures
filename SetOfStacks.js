@@ -13,14 +13,19 @@ class SetOfStacks {
   }
 
   push(value) {
-    const currentStack = this.stacks.length - 1;
-    if (currentStack === -1 || this.isFull(currentStack)) {
+    const numStacks = this.stacks.length;
+    if (this.stacks.length === 0 || this.isFull(this.stacks.length - 1)) {
       this.stacks.push([value]);
     } else {
-      if (this.stacks[currentStack] === undefined) {
-        this.stacks[currentStack] = [value];
+      if (this.stacks[numStacks - 1].length === this.maxSize) {
+        this.stacks.push([value]);
       } else {
-        this.stacks[currentStack].push(value);
+        for (let i = 0; i < numStacks; i++) {
+          if (this.stacks[i].length < this.maxSize) {
+            this.stacks[i].push(value);
+            break;
+          }
+        }
       }
     }
   }
@@ -32,6 +37,10 @@ class SetOfStacks {
       this.stacks.pop();
     }
     return result;
+  }
+
+  popAt(stackNum) {
+    return this.stacks[stackNum].pop();
   }
 
   toString() {
@@ -47,6 +56,10 @@ stacks.push(4);
 stacks.push(5);
 stacks.push(6);
 stacks.push(7);
+stacks.toString();
+stacks.popAt(1);
+stacks.toString();
+stacks.push(100);
 stacks.toString();
 console.log(stacks.pop());
 stacks.toString();
